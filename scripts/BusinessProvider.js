@@ -129,5 +129,11 @@ export const manufacturingBusinesses = businesses.filter(buisiness => {
 });
 
 export const agentNames = businesses.map(object => {
-  return `${object.purchasingAgent.nameFirst} ${object.purchasingAgent.nameLast}`
+  const fullNameof = `${object.purchasingAgent.nameFirst} ${object.purchasingAgent.nameLast}`;
+  return {
+    "fullName": fullNameof,
+    "company": object.companyName,
+    "phoneNumber": object.phoneWork
+}
+console.log(agentNames)
 })
