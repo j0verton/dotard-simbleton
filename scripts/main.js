@@ -1,4 +1,4 @@
-import createBusinessArray from './scripts/BusinessProvider.js'
-import createBusinessList from './scripts/BusinessList.js'
+import {createBusinessArray} from './BusinessProvider.js'
+import {createBusinessList} from './BusinessList.js'
 
 createBusinessList();
