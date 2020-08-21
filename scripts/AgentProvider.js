@@ -1,6 +1,6 @@
 import {createBusinessArray} from "./BusinessProvider";
 businessArray = createBusinessArray()
 
-export const AgentNames = businessArray.map(supplyObject => {
-    return supplyObject.brand
+export const agentNames = businessArray.map(object => {
+    return `${object.purchasingAgent.nameFirst} ${object.purchasingAgent.nameLast}`
 })
