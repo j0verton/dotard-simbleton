@@ -74,7 +74,6 @@ document
                 </h2>
                 <section>
                 ${foundBusiness.addressFullStreet}
-
                 </section>
                 <section>
                 ${foundBusiness.addressCity},
