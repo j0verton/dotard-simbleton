@@ -68,6 +68,7 @@ document
             console.log(foundBusiness)
             debugger;
             companySearchResultArticle.innerHTML = `
+                <h1>SEARCH RESULTS</h1>
                 <h2>
                 ${foundBusiness.companyName}
                 </h2>
