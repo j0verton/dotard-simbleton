@@ -113,3 +113,32 @@ const businesses = [
   export const createBusinessArray = () => {
       return businesses.slice();
   }
+
+  export const nyBusinesses = businesses.filter(buisiness => {
+    if (buisiness.addressStateCode ===  "NY") {
+        return true
+    }
+    return false
+});
+
+export const manufacturingBusinesses = businesses.filter(buisiness => {
+  if (buisiness.companyIndustry === "Manufacturing") {
+      return true
+  }
+  return false
+});
+
+export const agentNames = businesses.map(object => {
+  const fullNameof = `${object.purchasingAgent.nameFirst} ${object.purchasingAgent.nameLast}`;
+  return {
+    "fullName": fullNameof,
+    "company": object.companyName,
+    "phoneNumber": object.phoneWork
+}
+console.log(agentNames)
+})
+
+export const findBusiness = (input) => {
+  return businesses.find(business => business.companyName == input)
+};
+
