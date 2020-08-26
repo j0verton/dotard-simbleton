@@ -137,3 +137,8 @@ export const agentNames = businesses.map(object => {
 }
 console.log(agentNames)
 })
+
+export const findBusiness = (input) => {
+  return businesses.find(business => business.companyName == input)
+};
+
