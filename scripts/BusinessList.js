@@ -75,6 +75,7 @@ document
                 <section>
                 ${foundBusiness.addressFullStreet}
                 </section>
+                
                 <section>
                 ${foundBusiness.addressCity},
                 ${foundBusiness.addressStateCode}
