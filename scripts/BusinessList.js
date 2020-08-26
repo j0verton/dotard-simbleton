@@ -38,10 +38,6 @@ export const createManufacturingBusinessList = () => {
         }
     );
 }
-const businessArrayCopy = createBusinessArray();
-export const findBusiness = (input) => {
-    return businessArrayCopy.find(business => business.companyName == input)
-};
 
 const companySearchResultArticle = document.querySelector(".foundCompanies")
 
@@ -57,16 +53,19 @@ document
                 Example:
                     business.companyName.includes(keyPressEvent.target.value)
             */
-            // debugger;
+           const businessArrayCopy = createBusinessArray();
+    const findBusiness = (input) => {
+        return businessArrayCopy.find(business => business.companyName.includes(input))
+    }
             const inputField = document.getElementById("companySearch")
             const userInput = inputField.value
-        //    businessArray.find(findBusiness() => )
-
-// implement .find()  method here 
             let foundBusiness = findBusiness(userInput)
-            // let foundBusiness = business.companyName.includes(keyPressEvent.target.value)
-            console.log(foundBusiness)
-            debugger;
+                      
+            //makes other lists disappear when a search is run.
+            if(foundBusiness) {
+                let hideTargets = document.querySelector(".lists");
+                hideTargets.style.display = "none";
+            }
             companySearchResultArticle.innerHTML = `
                 <h1>SEARCH RESULTS</h1>
                 <h2>
